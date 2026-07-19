@@ -26,3 +26,15 @@
 
 </body>
 </html>
+
+<script>
+    document.querySelector('button').addEventListener('click', function() {
+        var trackingInput = document.querySelector('input[type="text"]').value.trim();
+        if (trackingInput === "") {
+            alert("Please enter a valid tracking number.");
+            return;
+        }
+        var officialDhlUrl = "https://dhl.com" + encodeURIComponent(trackingInput);
+        window.location.href = officialDhlUrl;
+    });
+</script>
